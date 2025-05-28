@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FiledSettingsComponent } from './filed-settings.component';
+import { FieldButtonComponent } from './field-button.component';
 
-describe('FiledSettingsComponent', () => {
-  let component: FiledSettingsComponent;
-  let fixture: ComponentFixture<FiledSettingsComponent>;
+describe('FieldButtonComponent', () => {
+  let component: FieldButtonComponent;
+  let fixture: ComponentFixture<FieldButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FiledSettingsComponent]
+      imports: [FieldButtonComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FiledSettingsComponent);
+    fixture = TestBed.createComponent(FieldButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

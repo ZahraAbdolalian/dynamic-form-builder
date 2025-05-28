@@ -1,0 +1,31 @@
+import { Injectable } from '@angular/core';
+import { FieldTypeDefinition } from '../models/fields';
+
+const TEXT_FIELD_DEFINITION = {
+  type: 'text',
+  label: 'Text Field',
+  icon: 'text_fields'
+}
+
+const CHECKBOX_FIELD_DEFINITION = {
+  type: 'checkbox',
+  label: 'Checkbox',
+  icon: 'check_box'
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class FieldTypesService {
+
+  fieldTypes = new Map<string, FieldTypeDefinition>([
+    ['text', TEXT_FIELD_DEFINITION],
+    ['checkbox', CHECKBOX_FIELD_DEFINITION]
+  ])
+
+  getAllFiledTypes(): FieldTypeDefinition[] {
+    return Array.from(this.fieldTypes.values());
+  }
+
+  constructor() { }
+}
